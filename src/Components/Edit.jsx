@@ -3,6 +3,7 @@ import { ProductContext } from "../utils/Context";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { IoIosArrowBack } from "react-icons/io";
+import { motion } from "motion/react";
 const Edit = () => {
       const navigate = useNavigate();
       const { id } = useParams();
@@ -37,15 +38,15 @@ const Edit = () => {
             toast.info("Product Updated!");
       };
       const goBack = () => {
-            navigate(-1);
+            navigate(`/view/${products.id}`);
       };
       return (
             <form className="w-screen h-screen flex justify-center items-center" action="" onSubmit={handleChanges}>
                   <div className="w-full h-full flex flex-col bg-zinc-100 rounded-lg p-4 shadow-sm relative">
                         <button onClick={goBack}>
-                              <div className="rounded-full bg-black text-white w-11 h-11 flex items-center justify-center absolute z-20 top-4 left-4">
+                              <motion.div whileTap={{ scale: 0.6 }} className="rounded-full bg-black text-white w-11 h-11 flex items-center justify-center absolute z-20 top-4 left-4">
                                     <IoIosArrowBack size={"1.3rem"} />
-                              </div>
+                              </motion.div>
                         </button>
                         <h2 className="text-black font-bold text-lg mt-24 text-center">Edit Product</h2>
                         <div className="mt-4">

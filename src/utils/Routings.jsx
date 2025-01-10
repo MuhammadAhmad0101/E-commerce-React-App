@@ -12,7 +12,7 @@ function Routings() {
                         element={
                               <>
                                     <Navbar />
-                                    <div className="w-full min-h-[40rem] flex justify-start px-6 items-center flex-col gap-4">
+                                    <div className="w-full min-h-[40rem] flex justify-start px-4 items-center flex-col gap-3 mb-10">
                                           <Card />
                                     </div>
                               </>
